@@ -2,26 +2,24 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projectsData } from '@/data/projects';
 
-export default function Projects() {
-  const featuredProjects = projectsData.filter(p => p.category === 'Empresarial');
+export default function PersonalProjects() {
+  const personalProjects = projectsData.filter(p => p.category === 'Personal');
 
   return (
-    <section className="py-24 border-t border-slate-200 dark:border-primary/10 max-w-7xl mx-auto px-6" id="proyectos">
+    <section className="py-24 border-t border-slate-200 dark:border-primary/10 max-w-7xl mx-auto px-6" id="proyectos-personales">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div className="space-y-4">
-          <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Proyectos Destacados</h2>
+          <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Proyectos Personales</h2>
           <div className="w-20 h-1.5 bg-primary rounded-full"></div>
           <p className="text-slate-600 dark:text-slate-400 max-w-xl font-light text-lg">
-            Sistemas reales desarrollados y desplegados en producción, enfocados en resolver problemas de negocio complejos.
+            Exploraciones técnicas y laboratorios donde aplico nuevas tecnologías y perfecciono mis habilidades de desarrollo.
           </p>
         </div>
-        <Link className="group flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm font-bold hover:border-primary transition-all hover:shadow-lg" href="https://github.com/GarkarAXO" target="_blank">
-          Ver GitHub <span className="material-symbols-outlined text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
-        </Link>
+        <div className="hidden md:block w-48"></div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {featuredProjects.map((project, index) => (
+        {personalProjects.map((project, index) => (
           <div key={index} className="group flex flex-col bg-white dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
             {/* Contenedor de Imagen */}
             <div className="aspect-[16/10] relative overflow-hidden bg-slate-100 dark:bg-slate-900">
