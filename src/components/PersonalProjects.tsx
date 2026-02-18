@@ -46,7 +46,7 @@ export default function PersonalProjects() {
               <div className="space-y-2">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-light line-clamp-2">
-                  {project.description}
+                  {project.overview}
                 </p>
               </div>
 

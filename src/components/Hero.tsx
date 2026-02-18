@@ -33,7 +33,7 @@ export default function Hero() {
               Ingeniero en Tecnologías de la Información y Comunicaciones
             </p>
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-light max-w-xl">
-              Desarrollador Fullstack especializado en crear sistemas empresariales robustos, integración de APIs y soluciones tecnológicas que impulsan el crecimiento de los negocios.
+              Desarrollador de Software Jr especializado en crear sistemas empresariales robustos, integración de APIs y soluciones tecnológicas que impulsan el crecimiento de los negocios.
             </p>
           </div>
 

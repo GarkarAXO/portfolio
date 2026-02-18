@@ -31,7 +31,7 @@ export default function About() {
             </div>
             <div className="p-6 bg-slate-100 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-700/50">
               <span className="material-symbols-outlined text-primary text-3xl mb-4">database</span>
-              <h3 className="font-bold mb-2 text-slate-900 dark:text-white">Fullstack Dev</h3>
+              <h3 className="font-bold mb-2 text-slate-900 dark:text-white">Desarrollo Jr</h3>
               <p className="text-sm text-slate-600 dark:text-slate-400">Dominio de React, Node.js, PHP y Python para soluciones integrales.</p>
             </div>
           </div>
