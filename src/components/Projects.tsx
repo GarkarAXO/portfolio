@@ -1,36 +1,93 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
+const projects = [
+  {
+    title: "Sistema de Gestión Empresarial Darmax",
+    description: "ERP completo desarrollado desde cero con React, Node.js y MySQL. Incluye integraciones con Stripe para pagos y Skydropx para logística.",
+    tags: ["Fullstack", "Integración APIs", "Stripe"],
+    link: "https://ventas-darmax-gestion.vercel.app",
+    image: "/img/proyectos/gestion.png", // Nombre real verificado
+    icon: "business_center"
+  },
+  {
+    title: "Sitio Corporativo Darmax Agua",
+    description: "Sitio oficial de Darmax Agua en producción. Desarrollo completo, configuración de DNS y despliegue automatizado en Vercel.",
+    tags: ["Frontend", "Vercel", "Empresarial"],
+    link: "https://darmaxagua.com.mx",
+    image: "/img/proyectos/agua.png", // Asegúrate de subir este como agua.png
+    icon: "water_drop"
+  },
+  {
+    title: "Portal Empresarial Mi Empeño",
+    description: "Desarrollo y mantenimiento de portal corporativo, incluyendo scrapers automatizados en Python y automatizaciones de flujos internos.",
+    tags: ["Python", "Flask", "Automatización"],
+    link: "https://partners.miempeno.com",
+    image: "/img/proyectos/miempeno.png", // Asegúrate de subir este como miempeno.png
+    icon: "smart_toy"
+  }
+];
+
 export default function Projects() {
   return (
-    <section id="proyectos" className="w-full py-20 px-4 bg-gray-100 dark:bg-gray-800">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">
-          Mis Proyectos
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Tarjeta de Proyecto 1 */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Proyecto 1</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Una breve descripción de mi proyecto. Qué tecnologías usé y cuál fue mi rol.
-            </p>
-            <a href="#" className="text-blue-500 hover:underline">Ver más</a>
-          </div>
-          {/* Tarjeta de Proyecto 2 */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Proyecto 2</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Una breve descripción de mi proyecto. Qué tecnologías usé y cuál fue mi rol.
-            </p>
-            <a href="#" className="text-blue-500 hover:underline">Ver más</a>
-          </div>
-          {/* Tarjeta de Proyecto 3 */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Proyecto 3</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Una breve descripción de mi proyecto. Qué tecnologías usé y cuál fue mi rol.
-            </p>
-            <a href="#" className="text-blue-500 hover:underline">Ver más</a>
-          </div>
+    <section className="py-24 border-t border-slate-200 dark:border-primary/10 max-w-7xl mx-auto px-6" id="proyectos">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="space-y-4">
+          <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Proyectos Destacados</h2>
+          <div className="w-20 h-1.5 bg-primary rounded-full"></div>
+          <p className="text-slate-600 dark:text-slate-400 max-w-xl font-light text-lg">
+            Sistemas reales desarrollados y desplegados en producción, enfocados en resolver problemas de negocio complejos.
+          </p>
         </div>
+        <Link className="group flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm font-bold hover:border-primary transition-all hover:shadow-lg" href="https://github.com/GarkarAXO" target="_blank">
+          Ver GitHub <span className="material-symbols-outlined text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
+        </Link>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {projects.map((project, index) => (
+          <div key={index} className="group flex flex-col bg-white dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+            {/* Contenedor de Imagen */}
+            <div className="aspect-[16/10] relative overflow-hidden bg-slate-100 dark:bg-slate-800">
+              <Image 
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                unoptimized={true} // Úsalo si tienes problemas con el optimizador de Next en local
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                <span className="text-white text-xs font-bold uppercase tracking-widest bg-primary px-3 py-1 rounded-full">Ver Proyecto</span>
+              </div>
+            </div>
+
+            <div className="p-8 flex flex-col grow space-y-5">
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map(tag => (
+                  <span key={tag} className="px-3 py-1 bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-primary text-[10px] font-black uppercase rounded-full border border-slate-200 dark:border-primary/20">{tag}</span>
+                ))}
+              </div>
+              
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-light line-clamp-3">
+                  {project.description}
+                </p>
+              </div>
+
+              <div className="mt-auto pt-6 flex items-center justify-between border-t border-slate-100 dark:border-slate-800">
+                <div className="flex items-center gap-2 text-slate-400">
+                  <span className="material-symbols-outlined text-xl">{project.icon}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-tighter">Producción</span>
+                </div>
+                <Link href={project.link} target="_blank" className="flex items-center gap-2 text-primary text-sm font-bold group/link">
+                  Explorar <span className="material-symbols-outlined text-lg transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -2,22 +2,16 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-100 dark:bg-black shadow-inner">
-      <div className="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-gray-600 dark:text-gray-300 text-center md:text-left mb-4 md:mb-0">
-          © {new Date().getFullYear()} [Tu Nombre]. Todos los derechos reservados.
-        </p>
-        <div className="flex space-x-6">
-          {/* Reemplaza con tus enlaces reales */}
-          <Link href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-            GitHub
-          </Link>
-          <Link href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-            LinkedIn
-          </Link>
-          <Link href="https://twitter.com/tu-usuario" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-            Twitter / X
-          </Link>
+    <footer className="max-w-7xl mx-auto px-6 py-12 border-t border-slate-200 dark:border-primary/10 text-slate-500 text-sm w-full">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex items-center gap-4">
+          <span className="font-bold text-slate-900 dark:text-white text-base">Erick Axel García Jiménez</span>
+          <span>© {new Date().getFullYear()}</span>
+        </div>
+        <div className="flex gap-6 font-medium">
+          <Link className="hover:text-primary transition-colors" href="https://github.com/GarkarAXO" target="_blank">GitHub</Link>
+          <Link className="hover:text-primary transition-colors" href="https://linkedin.com/in/e-axel-garcia" target="_blank">LinkedIn</Link>
+          <Link className="hover:text-primary transition-colors" href="mailto:e.axel12@gmail.com">Email</Link>
         </div>
       </div>
     </footer>
