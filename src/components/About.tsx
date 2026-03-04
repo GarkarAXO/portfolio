@@ -1,3 +1,5 @@
+import Ajolote from "./Ajolote";
+
 export default function About() {
   const certifications = [
     { name: 'Python Essentials 1', issuer: 'Cisco Networking Academy', year: '2023' },
@@ -35,10 +37,23 @@ export default function About() {
               <p className="text-sm text-slate-600 dark:text-slate-400">Dominio de React, Node.js, PHP y Python para soluciones integrales.</p>
             </div>
           </div>
+
+          {/* Ajolote Interactivo debajo de las Skills */}
+          <div className="flex flex-col items-center sm:items-start justify-center p-6 bg-gradient-to-r from-primary/5 to-transparent rounded-2xl border border-primary/5 shadow-sm max-w-fit">
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <Ajolote />
+              <div className="text-center sm:text-left space-y-1">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Axolotl Interactive</p>
+                <p className="text-sm text-slate-500 dark:text-slate-400 font-light max-w-[200px]">
+                  Un pequeño ejemplo de interactividad con Framer Motion.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Columna de Educación y Certificaciones */}
-        <div className="lg:col-span-5 space-y-10">
+        <div className="lg:col-span-5 space-y-8">
           {/* Educación */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">

@@ -21,6 +21,56 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: "afizionados",
+    title: "ARENA - Afizionados",
+    category: "Empresarial",
+    date: "Marzo 2026",
+    overview: "Ecosistema integral para el coleccionismo de memorabilia deportiva de alto valor. Diseñé una plataforma premium que permite a los usuarios gestionar su propia 'Bóveda' digital, participar en subastas en vivo y acceder a servicios de peritaje profesional.",
+    challenge: "El desafío principal fue crear una interfaz que transmita la exclusividad y seguridad necesaria para transacciones de artículos históricos, integrando mecánicas de subastas en tiempo real y una gestión de inventario visualmente impactante.",
+    results: "Una plataforma elegante que centraliza el mercado de memorabilia, elevando el estándar de confianza mediante la integración de servicios de autenticación y una experiencia de usuario fluida para coleccionistas élite.",
+    tech: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
+    image: "https://res.cloudinary.com/defkuaytw/image/upload/f_auto,q_auto,w_1200/v1772663614/Captura_de_pantalla_2026-03-04_163141_m55v8w.png",
+    screenshots: ["https://res.cloudinary.com/defkuaytw/image/upload/f_auto,q_auto,w_1200/v1772663614/Captura_de_pantalla_2026-03-04_163141_m55v8w.png"],
+    link: "https://afizionados.vercel.app/",
+    hasDemo: true,
+    client: "Afizionados / ARENA",
+    duration: "2 Meses (En curso)",
+    role: "Fullstack Developer & UI/UX Designer",
+    icon: "trophy",
+    features: [
+      "Bóveda Personal para gestión de colecciones",
+      "Sistema de subastas en vivo con pujas en tiempo real",
+      "Catálogo curado de piezas históricas certificadas",
+      "Integración de servicios de peritaje y valuación",
+      "Carrito de compras optimizado para artículos únicos"
+    ]
+  },
+  {
+    id: "landing-dental",
+    title: "ImplantTech Systems · Landing Page",
+    category: "Personal",
+    date: "Febrero 2026",
+    overview: "Landing page de alta ingeniería dental desarrollada con Astro para una velocidad de carga excepcional. Enfocada en la presentación de implantes y soluciones biomédicas con un diseño minimalista y profesional.",
+    challenge: "Comunicar rigor científico y precisión técnica médica manteniendo una navegación intuitiva y una estética moderna que genere confianza inmediata en profesionales de la salud.",
+    results: "Una interfaz ultra rápida (Astro) que equilibra datos técnicos complejos (normas ISO, certificaciones) con una experiencia de usuario premium, logrando una tasa de conversión optimizada para captación de clínicas.",
+    tech: ["Astro", "Tailwind CSS", "TypeScript", "Biotech UI Concepts"],
+    image: "https://res.cloudinary.com/defkuaytw/image/upload/f_auto,q_auto,w_1200/v1772663331/Captura_de_pantalla_2026-03-04_133757_hysnd5.png",
+    screenshots: ["https://res.cloudinary.com/defkuaytw/image/upload/f_auto,q_auto,w_1200/v1772663331/Captura_de_pantalla_2026-03-04_133757_hysnd5.png"],
+    link: "https://landing-dental.vercel.app/",
+    hasDemo: true,
+    client: "Propio / ImplantTech",
+    duration: "2 Semanas",
+    role: "Designer & Developer",
+    icon: "medical_services",
+    features: [
+      "Desarrollo con Astro para performance máximo",
+      "Arquitectura de componentes escalable",
+      "Secciones de investigación biomédica y trazabilidad",
+      "Diseño responsivo optimizado para profesionales",
+      "Cumplimiento visual de estándares médicos internacionales"
+    ]
+  },
+  {
     id: "darmax-gestion",
     title: "Ecosistema Darmax: Didi Food para Purificadoras",
     category: "Empresarial",
