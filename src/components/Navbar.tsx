@@ -32,7 +32,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <a 
-            href="/cv.pdf" 
+            href="/files/Erick Axel Garcia Jimenez CV.pdf" 
             target="_blank" 
             className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all"
           >

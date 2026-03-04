@@ -50,7 +50,7 @@ export default function Hero() {
             <a href="#proyectos" className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-primary/20 text-center hover:scale-105 active:scale-95">
               Ver Proyectos
             </a>
-            <a href="/cv.pdf" target="_blank" className="px-8 py-4 bg-white dark:bg-slate-800 text-primary font-bold rounded-xl border-2 border-primary/20 hover:border-primary/50 transition-all text-center flex items-center justify-center gap-2 hover:scale-105 active:scale-95">
+            <a href="/files/Erick Axel Garcia Jimenez CV.pdf" target="_blank" className="px-8 py-4 bg-white dark:bg-slate-800 text-primary font-bold rounded-xl border-2 border-primary/20 hover:border-primary/50 transition-all text-center flex items-center justify-center gap-2 hover:scale-105 active:scale-95">
               <span className="material-symbols-outlined text-xl">download</span>
               Descargar CV
             </a>
