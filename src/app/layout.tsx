@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import CustomCursor from "@/components/CustomCursor";
+import BackToTop from "@/components/BackToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-primary/30 lg:cursor-none`}>
         <ThemeProvider>
           <CustomCursor />
+          <BackToTop />
           <Navbar />
           {children}
           <Footer />

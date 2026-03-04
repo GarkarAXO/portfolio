@@ -24,10 +24,10 @@ export default function Navbar() {
         </div>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
-          <Link className="hover:text-primary transition-colors" href="#inicio">Inicio</Link>
-          <Link className="hover:text-primary transition-colors" href="#proyectos">Proyectos</Link>
-          <Link className="hover:text-primary transition-colors" href="#sobre-mi">Sobre mí</Link>
-          <Link className="hover:text-primary transition-colors" href="#contacto">Contacto</Link>
+          <Link className="hover:text-primary transition-colors" href="/#inicio">Inicio</Link>
+          <Link className="hover:text-primary transition-colors" href="/#proyectos">Proyectos</Link>
+          <Link className="hover:text-primary transition-colors" href="/#sobre-mi">Sobre mí</Link>
+          <Link className="hover:text-primary transition-colors" href="/#contacto">Contacto</Link>
         </nav>
 
         <div className="flex items-center gap-4">

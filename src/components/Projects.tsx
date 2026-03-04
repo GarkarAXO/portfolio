@@ -57,7 +57,9 @@ export default function Projects() {
             <div className="p-8 flex flex-col grow space-y-5">
               <div className="flex flex-wrap gap-2">
                 {project.tech.slice(0, 3).map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-slate-100 dark:bg-primary/10 text-slate-600 dark:text-primary text-[10px] font-black uppercase rounded-full border border-slate-200 dark:border-primary/20">{tag}</span>
+                  <span key={tag} className="px-3 py-1.5 bg-primary/5 dark:bg-primary/10 text-primary text-[10px] font-black uppercase rounded-lg border border-primary/20 tracking-wider shadow-sm">
+                    {tag}
+                  </span>
                 ))}
               </div>
               
