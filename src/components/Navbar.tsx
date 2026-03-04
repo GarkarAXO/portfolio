@@ -31,6 +31,14 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
+          <a 
+            href="/cv.pdf" 
+            target="_blank" 
+            className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all"
+          >
+            <span className="material-symbols-outlined text-lg">download</span>
+            CV
+          </a>
           <Link 
             className="w-10 h-10 aspect-square flex-shrink-0 flex items-center justify-center rounded-lg bg-slate-200 dark:bg-primary/10 hover:bg-primary/20 transition-all text-slate-700 dark:text-primary" 
             href="https://github.com/GarkarAXO" 

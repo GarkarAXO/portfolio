@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   const techStack = [
@@ -13,8 +16,13 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center pt-16 pb-20 px-6 max-w-7xl mx-auto overflow-hidden" id="inicio">
       <div className="grid lg:grid-cols-2 gap-12 items-center w-full relative z-10">
         {/* Columna de Texto */}
-        <div className="space-y-8 text-left order-2 lg:order-1">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider animate-fade-in">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="space-y-8 text-left order-2 lg:order-1"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 text-xs font-bold uppercase tracking-wider">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -42,7 +50,11 @@ export default function Hero() {
             <a href="#proyectos" className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-primary/20 text-center hover:scale-105 active:scale-95">
               Ver Proyectos
             </a>
-            <a href="#contacto" className="px-8 py-4 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center hover:scale-105 active:scale-95">
+            <a href="/cv.pdf" target="_blank" className="px-8 py-4 bg-white dark:bg-slate-800 text-primary font-bold rounded-xl border-2 border-primary/20 hover:border-primary/50 transition-all text-center flex items-center justify-center gap-2 hover:scale-105 active:scale-95">
+              <span className="material-symbols-outlined text-xl">download</span>
+              Descargar CV
+            </a>
+            <a href="#contacto" className="px-8 py-4 bg-slate-100 dark:bg-slate-800/50 text-slate-600 dark:text-slate-300 font-bold rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-center hover:scale-105 active:scale-95">
               Contactar
             </a>
           </div>
@@ -63,10 +75,15 @@ export default function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Columna Visual */}
-        <div className="relative order-1 lg:order-2 flex justify-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="relative order-1 lg:order-2 flex justify-center"
+        >
           {/* Fondo Decorativo */}
           <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-blue-500/20 blur-3xl rounded-full opacity-60 animate-pulse"></div>
           
@@ -98,7 +115,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
       {/* Elementos decorativos de fondo */}

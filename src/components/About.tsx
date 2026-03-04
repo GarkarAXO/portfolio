@@ -1,4 +1,7 @@
+'use client';
+
 import Ajolote from "./Ajolote";
+import { motion } from 'framer-motion';
 
 export default function About() {
   const certifications = [
@@ -12,7 +15,13 @@ export default function About() {
     <section id="sobre-mi" className="py-20 border-t border-slate-200 dark:border-primary/10 max-w-7xl mx-auto px-6">
       <div className="grid lg:grid-cols-12 gap-16">
         {/* Columna de Texto Principal */}
-        <div className="lg:col-span-7 space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="lg:col-span-7 space-y-8"
+        >
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Trayectoria Profesional</h2>
             <div className="w-12 h-1 bg-primary"></div>
@@ -50,10 +59,16 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Columna de Educación y Certificaciones */}
-        <div className="lg:col-span-5 space-y-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:col-span-5 space-y-8"
+        >
           {/* Educación */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
@@ -91,7 +106,7 @@ export default function About() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

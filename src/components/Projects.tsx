@@ -1,13 +1,22 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { projectsData } from '@/data/projects';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
   const featuredProjects = projectsData.filter(p => p.category === 'Empresarial');
 
   return (
     <section className="py-24 border-t border-slate-200 dark:border-primary/10 max-w-7xl mx-auto px-6" id="proyectos">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+      >
         <div className="space-y-4">
           <h2 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Proyectos Destacados</h2>
           <div className="w-20 h-1.5 bg-primary rounded-full"></div>
@@ -18,11 +27,18 @@ export default function Projects() {
         <Link className="group flex items-center gap-3 px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm font-bold hover:border-primary transition-all hover:shadow-lg" href="https://github.com/GarkarAXO" target="_blank">
           Ver GitHub <span className="material-symbols-outlined text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">arrow_outward</span>
         </Link>
-      </div>
+      </motion.div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {featuredProjects.map((project, index) => (
-          <div key={index} className="group flex flex-col bg-white dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="group flex flex-col bg-white dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10"
+          >
             {/* Contenedor de Imagen */}
             <div className="aspect-[16/10] relative overflow-hidden bg-slate-100 dark:bg-slate-900">
               <Image 
@@ -61,7 +77,7 @@ export default function Projects() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
